@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2896dc0c-725c-4ba2-b45a-66363d7360b3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/.idea/DoanAnhQuan-2310900085-Project03-hatechno-main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/Hatechno.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/config/database.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/attendanceController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/authController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/dashboardController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/departmentController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/employeeController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/leaveController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/positionController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/profileController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/reportController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/rewardController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/controllers/salaryController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/middleware/authMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/middleware/uploadMiddleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/attendanceModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/departmentModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/employeeModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/leaveModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/positionModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/rewardModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/salaryModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/models/userModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/css/auth.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/css/layout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/js/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/attendance.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/departments.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/employees.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/leaves.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/positions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/reports.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/rewards.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/public/pages/salary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/attendanceRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/authRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/dashboardRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/departmentRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/employeeRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/leaveRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/positionRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/profileRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/reportRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/rewardRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/routes/salaryRoutes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/.idea/K23CNT2-PhamVanVu-2310900120.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/pages/employee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/temp_prj3/pages/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PhamVanVu-2310900120-Project03-hatechno-main/uploads/avatars/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/employee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="3HDZb4HtENTsPlSw6xpZ6TxFe2y" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Project3.1/K23CNT2-PhamVanVu-2310900120"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2896dc0c-725c-4ba2-b45a-66363d7360b3" name="Changes" comment="" />
+      <created>1785404668604</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785404668604</updated>
+    </task>
+    <servers />
+  </component>
+</project>
