@@ -45,27 +45,31 @@ class BookController extends Controller
     // 3. Xử lý lưu sách mới vào Database
     public function store(Request $request)
     {
-        // Validate dữ liệu (thêm rule kiểm tra ảnh)
+        // Validate dữ liệu (thêm rule kiểm tra ảnh và URL)
         $request->validate([
             'title' => 'required|max:255',
             'category_id' => 'required|integer',
             'author' => 'required|max:255',
             'price' => 'required|numeric',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // File phải là ảnh, tối đa 2MB
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // File phải là ảnh
+            'image_url' => 'nullable|url', // Link phải đúng định dạng URL
         ]);
 
-        // Xử lý upload ảnh
+        // Xử lý upload ảnh hoặc lấy link ảnh mạng
         $imagePath = null;
         if ($request->hasFile('image')) {
-            // Lưu ảnh vào thư mục public/storage/books
+            // Lưu ảnh tải lên từ máy tính
             $imagePath = $request->file('image')->store('books', 'public');
+        } elseif ($request->filled('image_url')) {
+            // Nếu không có file tải lên thì lấy link mạng
+            $imagePath = $request->input('image_url');
         }
 
         // Thêm dữ liệu vào bảng books (có thêm trường image)
         DB::table('books')->insert([
             'category_id' => $request->category_id,
             'title' => $request->title,
-            'image' => $imagePath, // Lưu đường dẫn ảnh vào Database
+            'image' => $imagePath, // Lưu đường dẫn ảnh (file hoặc link) vào Database
             'author' => $request->author,
             'price' => $request->price,
             'description' => $request->description,
@@ -100,11 +104,13 @@ class BookController extends Controller
             'author' => 'required|max:255',
             'price' => 'required|numeric',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image_url' => 'nullable|url', // Link phải đúng định dạng URL
         ], [
             'title.required' => 'Vui lòng nhập tên sách.',
             'category_id.required' => 'Vui lòng chọn danh mục.',
             'author.required' => 'Vui lòng nhập tác giả.',
             'price.required' => 'Vui lòng nhập giá tiền.',
+            'image_url.url' => 'Đường dẫn ảnh mạng không hợp lệ.',
         ]);
 
         // Tạo mảng dữ liệu cơ bản cần cập nhật
@@ -117,10 +123,14 @@ class BookController extends Controller
             'updated_at' => now(),
         ];
 
-        // Nếu người dùng có upload ảnh mới
+        // Ưu tiên 1: Nếu người dùng có upload ảnh mới từ máy tính
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('books', 'public');
-            $updateData['image'] = $imagePath; // Thêm đường dẫn ảnh mới vào mảng dữ liệu
+            $updateData['image'] = $imagePath; // Cập nhật cột image bằng file
+        } 
+        // Ưu tiên 2: Nếu không có file máy tính, nhưng CÓ nhập link mạng
+        elseif ($request->filled('image_url')) {
+            $updateData['image'] = $request->input('image_url'); // Cập nhật cột image bằng link
         }
 
         DB::table('books')->where('id', $id)->update($updateData);

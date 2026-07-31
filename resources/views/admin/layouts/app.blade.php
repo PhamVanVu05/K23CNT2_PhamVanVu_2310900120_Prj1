@@ -23,6 +23,8 @@
                 <a href="{{ route('admin.books.index') }}">Quản lý Sách</a>
                 <a href="{{ route('admin.orders.index') }}">Quản lý Đơn hàng</a>
                 <a href="{{ route('admin.users.index') }}">Quản lý Khách hàng</a>
+                <a href="{{ route('admin.coupons.index') }}">Quản lý Mã giảm giá</a>
+                <a href="{{ route('admin.reviews.index') }}">Quản lý Đánh giá & Bình luận</a>
                 <hr class="text-white">
                 <a href="#" class="text-danger">Đăng xuất</a>
             </div>

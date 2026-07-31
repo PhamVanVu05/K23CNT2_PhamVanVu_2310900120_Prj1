@@ -3,7 +3,45 @@
 use Illuminate\Support\Facades\Route;
 
 // Trang chủ Khách hàng
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Trang chi tiết sách
+    Route::get('/sach/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('book.detail');
+
+// Route xử lý Giỏ hàng
+    Route::post('/cart/add/{id}', [App\Http\Controllers\CartController::class, 'add'])->name('cart.add');
+    Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+    Route::delete('/cart/remove/{id}', [App\Http\Controllers\CartController::class, 'remove'])->name('cart.remove');
+
+// Route xử lý Thanh toán (Checkout)
+    Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout.index');
+
+// Route hiển thị form thanh toán
+    Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout.index');
+
+// Route xử lý việc lưu đơn hàng khi bấm nút "XÁC NHẬN ĐẶT HÀNG"
+    Route::post('/checkout/process', [App\Http\Controllers\CheckoutController::class, 'process'])->name('checkout.process');
+
+// Đăng nhập / Đăng ký Khách hàng
+    Route::get('/dang-nhap', [App\Http\Controllers\ClientAuthController::class, 'showLogin'])->name('client.login');
+    Route::post('/dang-nhap', [App\Http\Controllers\ClientAuthController::class, 'login'])->name('client.login.post');
+
+    Route::get('/dang-ky', [App\Http\Controllers\ClientAuthController::class, 'showRegister'])->name('client.register');
+    Route::post('/dang-ky', [App\Http\Controllers\ClientAuthController::class, 'register'])->name('client.register.post');
+
+    Route::post('/dang-xuat', [App\Http\Controllers\ClientAuthController::class, 'logout'])->name('client.logout');
+
+// Route Lịch sử mua hàng (Bắt buộc đăng nhập)
+    Route::get('/lich-su-mua-hang', [App\Http\Controllers\CheckoutController::class, 'history'])
+    ->name('client.history')
+    ->middleware('auth');
+
+// Route xử lý mã giảm giá
+    Route::post('/checkout/apply-coupon', [App\Http\Controllers\CheckoutController::class, 'applyCoupon'])->name('checkout.apply-coupon');
+    Route::post('/checkout/remove-coupon', [App\Http\Controllers\CheckoutController::class, 'removeCoupon'])->name('checkout.remove-coupon');
+    
+// Route xử lý gửi đánh giá (Yêu cầu id của cuốn sách)
+    Route::post('/sach/{id}/review', [App\Http\Controllers\HomeController::class, 'postReview'])->name('book.review');
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
@@ -54,4 +92,12 @@ Route::prefix('admin')->group(function () {
     Route::get('/orders/{id}', [App\Http\Controllers\Admin\OrderController::class, 'show'])->name('admin.orders.show');
     Route::post('/orders/{id}/status', [App\Http\Controllers\Admin\OrderController::class, 'updateStatus'])->name('admin.orders.update_status');
 
+    // Quản lý Mã giảm giá
+    Route::get('/coupons', [App\Http\Controllers\Admin\CouponController::class, 'index'])->name('admin.coupons.index');
+    Route::post('/coupons', [App\Http\Controllers\Admin\CouponController::class, 'store'])->name('admin.coupons.store');
+    Route::delete('/coupons/{id}', [App\Http\Controllers\Admin\CouponController::class, 'destroy'])->name('admin.coupons.destroy');
+
+    // Quản lý Đánh giá & Bình luận
+    Route::get('/reviews', [App\Http\Controllers\Admin\ReviewController::class, 'index'])->name('admin.reviews.index');
+    Route::delete('/reviews/{id}', [App\Http\Controllers\Admin\ReviewController::class, 'destroy'])->name('admin.reviews.destroy');
 });

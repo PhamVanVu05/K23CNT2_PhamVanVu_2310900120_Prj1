@@ -13,8 +13,29 @@
         </div>
 
         <div class="mb-3">
-         <label class="form-label">Ảnh bìa</label>
-         <input type="file" name="image" class="form-control" accept="image/*">
+            <label class="form-label fw-bold">Ảnh bìa</label>
+            
+            <!-- Hiện ảnh cũ nếu đang ở trang sửa -->
+            @if(isset($book) && $book->image)
+                <div class="mb-2">
+                    <img src="{{ str_contains($book->image, 'http') ? $book->image : asset('storage/' . $book->image) }}" alt="Ảnh bìa" style="max-height: 100px; border-radius: 5px;">
+                </div>
+            @endif
+
+            <div class="row">
+                <!-- Ô 1: Chọn file từ máy -->
+                <div class="col-md-6">
+                    <label class="text-muted small mb-1">Tải ảnh lên từ máy tính:</label>
+                    <input type="file" name="image" class="form-control" accept="image/*">
+                </div>
+                
+                <!-- Ô 2: Nhập link mạng -->
+                <div class="col-md-6">
+                    <label class="text-muted small mb-1">Hoặc nhập link ảnh (URL):</label>
+                    <input type="url" name="image_url" class="form-control" placeholder="https://ví-dụ.com/anh.jpg" value="{{ old('image_url') }}">
+                </div>
+            </div>
+            <small class="text-muted d-block mt-1">Bỏ trống cả 2 nếu không muốn thay đổi ảnh. Ưu tiên file từ máy nếu bạn nhập cả 2.</small>
         </div>
 
         <div class="mb-3">
